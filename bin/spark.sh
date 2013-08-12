@@ -39,12 +39,13 @@ EOF
 echo "plot \\"
 for (( k=1; k<=$N; k++ ))
 do
-    echo -e "\"$1\" using 1:$((N+1)) with boxes ls $N"
+    echo -en "\"$1\" using 1:$((k+1)) with boxes ls $k"
     if [ $k -lt $N ]; then
-	echo ', \'
+	echo -n ', \'
     fi
+    echo
 done
-} | gnuplot
+} | tee sample.gnuplot | gnuplot
 
 if [ -n "$3" ]
 then

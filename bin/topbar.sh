@@ -9,7 +9,7 @@ EOF
 for a in `grep "^author" gitline.conf | sed 's/author //;s/=.*//'`
 do
     echo "<td class=\"$a contrib ex\">&nbsp;</td>"
-    echo "<td class=\"name\">${a// /_}</td>"
+    echo "<td class=\"name\">${a//_/ }</td>"
 done
 cat <<EOF
 </tr>

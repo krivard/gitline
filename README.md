@@ -3,6 +3,8 @@ gitline
 
 Generate timeline statistics for a git repository and display in a web interface.
 
+The approach is pretty straightforward -- we get a log of who committed how many lines on each file, then we aggregate by each level of the filesystem tree, make a color-coded plot for each file, and display it all in a jquery treetable.
+
 Usage
 =====
 

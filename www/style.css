@@ -1,21 +1,14 @@
+#topbar {position:fixed;background:white;top:0;left:0;padding:5px;width:100%;
+	box-shadow:0 2px 4px #666}
+td.ex { width:20px }
+td.name {padding-right:50px}
+.contrib {margin:0 5px; font-weight:normal;} 
 
-.contrib {margin:0 5px; background:#d96; font-weight:normal;} 
-
-.Malcolm_Greaves {background:#6c6}
-
-.Kathryn_Mazaitis {background:#cc6}
-
-.Guanyu_Wang {background:#88d}
-
-img.spark {height:30px;width:200px;}
 #tree { xwidth:600px; border:none; margin-top: 50px }
 #tree td {border-bottom: 1pt #ccc solid; }
 #tree td.spark { width: 210px }
 #tree td.ln {width:60px; text-align: right}
 #tree th {background:#ccc; text-align: left; padding: 2px 10px}
 
-td.ex { width:20px }
-td.name {padding-right:50px}
+img.spark {height:30px;width:200px;}
 
-#topbar {position:fixed;background:white;top:0;left:0;padding:5px;width:100%;
-	box-shadow:0 2px 4px #666}

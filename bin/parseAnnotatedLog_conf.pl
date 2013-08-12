@@ -12,8 +12,8 @@ while(<>) {
     $users{$author}=0;
 }
 
-my @colors=("d96","6c6","cc6","88d",
-    "d69","9d6","6d9","c66","6d6","66d","6cc","c6c","d88","8d8");
+my @colors=("dd9966","66cc66","cccc66","8888dd",
+    "dd6699","99dd66","66dd99","cc6666","66dd66","6666dd","66cccc","cc66cc","dd8888","88dd88");
 
 open (my $conf,">>gitline.conf") or die "Couldn't open file gitline.conf for writing:\n$!\n";
 my $i=0;
