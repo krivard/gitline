@@ -40,7 +40,7 @@ colors.css: gitline.conf
 $(STATIC):;
 
 clean:
-	rm -f $(IMAGES)/* $(DAT)/* $(WWW)/colors.css $(WWW)/index.html sparks bin/parseAnnotatedLog_html.pl $(WWW)/topbar.html
+	rm -f $(IMAGES)/* $(DAT)/* $(WWW)/colors.css $(WWW)/index.html $(WWW)/topbar.html $(WWW)/body.html sparks bin/parseAnnotatedLog_html.pl
 
 cclean:
 	rm gitline.conf
