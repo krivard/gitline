@@ -1,12 +1,19 @@
 #!/bin/bash
 
+DIR=$1
+if [ -z "$1" ]
+then
+    DIR=`pwd`
+fi
+
+
 H=""
 A=""
 D=""
 S=""
 OIFS=$IFS
 IFS='%'
-git log --numstat --format="%% %h%%%aN%%%ad%%%s" --date=short --reverse|
+git --git-dir=$DIR log --numstat --format="%% %h%%%aN%%%ad%%%s" --date=short --reverse|
 while read rev;
 do
     if [ -z "$rev" ] ; then continue; fi

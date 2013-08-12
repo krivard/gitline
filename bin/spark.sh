@@ -24,24 +24,22 @@ set timefmt "%Y-%m-%d"
 
 EOF
 
-N=1;
+N=0;
 for a in `grep "^author" gitline.conf | sed 's/.*=//'`
 do
-    echo 'set style line $N lc rgb "$a"'
     N=$(($N+1));
+    echo -e "set style line $N lc rgb \"$a\""
 done
 
 cat <<EOF
 set style data histograms
 set style histogram rowstacked
 set style fill solid 
-
-plot \
 EOF
-
-for k in 1..$N
+echo "plot \\"
+for (( k=1; k<=$N; k++ ))
 do
-    echo '"$1" using 1:$((N=1)) with boxes ls $N \'
+    echo -e "\"$1\" using 1:$((N+1)) with boxes ls $N"
     if [ $k -lt $N ]; then
 	echo ', \'
     fi

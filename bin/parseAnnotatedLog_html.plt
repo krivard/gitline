@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 use constant { true => 1, false => 0 };
 
+my $url="%URL%";
 my %total, %totaluser;
 my %ulevel;
 my @level;
@@ -40,7 +41,7 @@ foreach my $key (sort(keys(%total))) {
     $imgkey =~ s/\//__/g;
     print "<td class=\"spark\"><img src=\"images/$imgkey.png\"/></td>";
     print "<td class=\"ln\">$total{$key}</td>";
-    print "<td><b><a href=\"https://bitbucket.org/malcolmgreaves/kbp_slot_filling_task/src/bc0879277f544f163308e9d408b355eae4523262/$key\">$key</a></b></td>";
+    print "<td><b><a href=\"$url$key\">$key</a></b></td>";
     print "</tr>\n";
     $lastLevel=$ulevel{$key};
 }
